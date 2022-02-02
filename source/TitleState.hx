@@ -649,7 +649,7 @@ class TitleState extends MusicBeatState
 
 			FlxG.camera.flash(FlxColor.PINK, 4);
 			remove(credGroup);
-			skippedIntro = false;
+			skippedIntro = true;
 		}
 	}
 }
