@@ -350,13 +350,13 @@ class WeekEditorState extends MusicBeatState
 		if(isMissing) {
 			weekThing.visible = false;
 			missingFileText.visible = true;
-			missingFileText.text = 'MISSING FILE: images/storymenu/' + assetName + '.png';
+			missingFileText.text = 'bruh you really have no .png?: images/storymenu/' + assetName + '.png';
 		}
 		recalculateStuffPosition();
 
 		#if desktop
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("Week Editor", "Editting: " + weekFileName);
+		DiscordClient.changePresence("week editor bruh", "Editting: " + weekFileName);
 		#end
 	}
 	
