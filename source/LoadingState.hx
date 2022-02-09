@@ -49,8 +49,8 @@ class LoadingState extends MusicBeatState
 		bg.screenCenter();
 
 		loadBar = new FlxSprite(0, FlxG.height - 20).makeGraphic(FlxG.width, 10, -59694);
-		loadBar.screenCenter(FlxAxes.X);
-		add(loadBar);	
+		//loadBar.screenCenter(FlxAxes.X);
+		//add(loadBar);	
 
 		logo = new FlxSprite(-150, -100);
 		logo.frames = Paths.getSparrowAtlas('logoBumpin');
