@@ -385,11 +385,13 @@ class TitleState extends MusicBeatState
 			initialized = true;
 
 		// credGroup.add(credTextShit);
-	}
-
-	function getIntroTextShit():Array<Array<String>>
+		
+	override function beatHit()
 	{
-		var fullText:String = Assets.getText(Paths.txt('introText'));
+		super.beatHit();
+		FlxG.camera.zoom += 0.015;
+
+	}		var fullText:String = Assets.getText(Paths.txt('introText'));
 
 		var firstArray:Array<String> = fullText.split('\n');
 		var swagGoodArray:Array<Array<String>> = [];
@@ -517,7 +519,7 @@ class TitleState extends MusicBeatState
 		}
 
 		super.update(elapsed);
-	}
+	}   FlxG.camera.zoom = FlxMath.lerp(defaultCamZoom, Flx.camera.zoom, 0.95);
 
 	function createCoolText(textArray:Array<String>, ?offset:Float = 0)
 	{
