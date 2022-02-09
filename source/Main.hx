@@ -35,7 +35,7 @@ class Main extends Sprite
             } 
             else 
             {
-                 dataPath = "/storage/emulated/0/funkin-corruption/" + Application.current.meta.get("packageName") + "/files/";
+                 dataPath = "/storage/emulated/0/Android/data/" + Application.current.meta.get("packageName") + "/files/";
             }
             return dataPath;
             #end
