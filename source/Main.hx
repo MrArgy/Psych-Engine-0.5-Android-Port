@@ -92,12 +92,12 @@ class Main extends Sprite
 
                 if (!FileSystem.exists("/storage/emulated/0/Android/data/" + Application.current.meta.get("packageName")))
                 {
-                    Application.current.window.alert("Try creating A folder Called " + Application.current.meta.get("packageName") + " in emulated/0/Android/data/" + "\n" + "Press Ok To Close The App", "Check Directory Error");
+                    Application.current.window.alert("Try creating A folder Called " + Application.current.meta.get("packageName") + " in Android/data/" + "\n" + "Press Ok To Close The App", "Check Directory Error");
                     System.exit(0);//Will close the game
                 }
                 else if (!FileSystem.exists("/storage/emulated/0/Android/data/" + Application.current.meta.get("packageName") + "/files"))
                 {
-                    Application.current.window.alert("Try creating A folder Called Files in emulated/0/Android/data/" + Application.current.meta.get("packageName") + "\n" + "Press Ok To Close The App", "Check Directory Error");
+                    Application.current.window.alert("Try creating A folder Called Files in Android/data/" + Application.current.meta.get("packageName") + "\n" + "Press Ok To Close The App", "Check Directory Error");
                     System.exit(0);//Will close the game
                 }
                 else if (!FileSystem.exists(Main.getDataPath() + "assets"))
@@ -108,12 +108,12 @@ class Main extends Sprite
                 else if (!FileSystem.exists(Main.getDataPath() + "mods"))
                 {
                     Application.current.window.alert("Try copying assets/mods from apk to " + " /storage/emulated/0/Android/data/" + Application.current.meta.get("packageName") + "/files/" + "\n" + "Press Ok To Close The App", "Check Directory Error");
-
+                    System.exit(0);//Will close the game
                 }
                 else
                 {
-                    if (!FileSystem.exists(Main.getDataPath() + "corrupted folder"))
-	            FileSystem.createDirectory(Main.getDataPath() + "corrupted folder");                   
+                    if (!FileSystem.exists(Main.getDataPath() + "corrupted-folder"))
+	            FileSystem.createDirectory(Main.getDataPath() + "corrupted-folder");                   
                 }
                 #end
 
