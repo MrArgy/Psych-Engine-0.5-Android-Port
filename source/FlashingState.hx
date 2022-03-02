@@ -29,9 +29,9 @@ class FlashingState extends MusicBeatState
 			you CANT turn them off.\n
 			this remastered was created by Mr. Argy and Ilidrag\n
 			ported by Mr. Argy\n
-                        if u decide to record the gameplay of this mod\n
-                        BE SURE TO ADD THE CREATORS IN THE DESCRIPTION UNDER THE VIDEO!!\n
-                        you have been warned.",
+            if u decide to record the gameplay of this mod\n
+            BE SURE TO ADD THE CREATORS IN THE DESCRIPTION UNDER THE VIDEO!!\n
+            you have been warned.",
 			32);
 		warnText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
 		warnText.screenCenter(Y);
