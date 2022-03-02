@@ -25,7 +25,7 @@ class AboutState extends MusicBeatState
 
 		// LOAD CHARACTERS
 
-		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
+		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBG'));
 		
 		logoBl = new FlxSprite(-150, -100);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
@@ -36,7 +36,7 @@ class AboutState extends MusicBeatState
 		logoBl.screenCenter();
 		logoBl.y = logoBl.y - 100;
 
-		text = new FlxText(0, 0, 0, "tricky" + "\n" + "ported by luckydog7", 64);
+		text = new FlxText(0, 0, 0, "Deathmatch remastered by Mr. Argy and Ilidrag" + "\n" + "Ported by Mr. Argy", 64);
 		text.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
 		text.screenCenter();
 		text.y = text.y + 150;
