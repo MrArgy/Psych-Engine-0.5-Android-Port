@@ -51,7 +51,7 @@ class OptionsState extends MusicBeatState
 			case 'Mobile Controls':
 				MusicBeatState.switchState(new options.CustomControlsState());
 			case 'About':
-				openSubState.switchState(new options.AboutState());
+				MusicBeatState.switchState(new options.AboutState());
 		}
 	}
 
