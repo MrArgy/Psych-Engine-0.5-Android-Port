@@ -231,7 +231,7 @@ class TitleState extends MusicBeatState
 		logoBl.screenCenter();
 		// logoBl.color = FlxColor.BLACK;
 		
-		backgroundTitle = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
+		backgroundTitle = new FlxSprite().loadGraphic(Paths.image('titleBG'));
                 backgroundTitle.screenCenter();
                 backgroundTitle.antialiasing = ClientPrefs.globalAntialiasing;
                 
@@ -379,7 +379,7 @@ class TitleState extends MusicBeatState
 			{
 				if(titleText != null) titleText.animation.play('press');
 
-				FlxG.camera.flash(FlxColor.WHITE, 1);
+				FlxG.camera.flash(FlxColor.BLACK, 1);
 				FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
 
 				transitioning = true;
