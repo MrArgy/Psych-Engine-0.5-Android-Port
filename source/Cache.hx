@@ -47,13 +47,13 @@ class Cache extends MusicBeatState
 		bitmapData = new Map<String,FlxGraphic>();
 		bitmapData2 = new Map<String,FlxGraphic>();
 
-		var menuBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image('funkay'));
-		menuBG.screenCenter();
-		add(menuBG);
+		var menuBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image('loadingScreens/loadingscreen-' + FlxG.random.int(1, 8)));
+    menuBG.screenCenter();
+    add(menuBG);
 
-		shitz = new FlxText(12, 12, 0, "Loading...", 12);
+		shitz = new FlxText(12, 12, 0, "Bugfix is loading lol", 12);
 		shitz.scrollFactor.set();
-		shitz.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		shitz.setFormat("VCR OSD Mono", 32, FlxColor.PINK, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(shitz);
 
 		#if cpp
