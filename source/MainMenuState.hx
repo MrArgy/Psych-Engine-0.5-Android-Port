@@ -51,7 +51,7 @@ class MainMenuState extends MusicBeatState
 	{
 		#if desktop
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("In the Menus", null);
+		DiscordClient.changePresence("ilidrak died(((", null);
 		#end
 
 		WeekData.setDirectoryFromWeek();
