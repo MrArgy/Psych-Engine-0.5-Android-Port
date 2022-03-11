@@ -11,7 +11,7 @@ using StringTools;
 
 class Achievements {
 	public static var achievementsStuff:Array<Dynamic> = [ //Name, Description, Achievement save tag, Hidden achievement
-		["Freaky on a Friday Night",	"Play on a Friday... Night.",						'friday_night_play',	 true],
+		["Freaky on a Friday Night",	"BEHOLD! THE SHUT-UP-FUCK-UP INATOR",						'friday_night_play',	 true],
 		["She Calls Me Daddy Too",		"Beat Week 1 on Hard with no Misses.",				'week1_nomiss',			false],
 		["No More Tricks",				"Beat Week 2 on Hard with no Misses.",				'week2_nomiss',			false],
 		["Call Me The Hitman",			"Beat Week 3 on Hard with no Misses.",				'week3_nomiss',			false],
@@ -25,8 +25,8 @@ class Achievements {
 		["Oversinging Much...?",		"Hold down a note for 10 seconds.",					'oversinging',			false],
 		["Hyperactive",					"Finish a Song without going Idle.",				'hype',					false],
 		["Just the Two of Us",			"Finish a Song pressing only two keys.",			'two_keys',				false],
-		["Toaster Gamer",				"Have you tried to run the game on a toaster?",		'toastie',				false],
-		["Debugger",					"Beat the \"Test\" Stage from the Chart Editor.",	'debugger',				 true]
+		["Toaster Gamer",				"ur phone too slow?",		'toastie',				false],
+		["Debugger",					"fucking debugger",	'debugger',				 true]
 	];
 	public static var achievementsMap:Map<String, Bool> = new Map<String, Bool>();
 
@@ -34,7 +34,7 @@ class Achievements {
 	public static function unlockAchievement(name:String):Void {
 		FlxG.log.add('Completed achievement "' + name +'"');
 		achievementsMap.set(name, true);
-		FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+		FlxG.sound.play(Paths.sound('behold'), 0.7);
 	}
 
 	public static function isAchievementUnlocked(name:String) {
