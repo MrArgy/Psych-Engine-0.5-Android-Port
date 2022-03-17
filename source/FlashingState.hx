@@ -31,7 +31,7 @@ class FlashingState extends MusicBeatState
 			ported by Mr. Argy\n
             if u decide to record the gameplay of this mod\n
             BE SURE TO ADD THE CREATORS IN THE DESCRIPTION UNDER THE VIDEO!!\n
-            you have been warned.",
+           you have been warned.",
 			32);
 		warnText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
 		warnText.screenCenter(Y);
