@@ -81,7 +81,7 @@ class CreditsState extends MusicBeatState
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
 			['Deathmatch Remastered by'],
-			['MrArgy',		'argy',		'Coder and builder',						'https://youtube.com/c/BeepMrArgyCoderLol',	'008AA3'],
+			['MrArgy',		'argy',		'Coder and builder/porter',						'https://youtube.com/c/BeepMrArgyCoderLol',	'008AA3'],
 			['IliDRAG',			'ilidrag',		'Artist/helper',					'https://youtube.com/c/IliDRAGFnaferOriginal',		'723900'],
 
 			[''],
@@ -140,6 +140,11 @@ class CreditsState extends MusicBeatState
 		bg.color = getCurrentBGColor();
 		intendedColor = bg.color;
 		changeSelection();
+		
+		#if mobileC
+        addVirtualPad(UP_DOWN, A_B);
+        #end
+		
 		super.create();
 	}
 
