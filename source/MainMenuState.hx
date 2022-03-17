@@ -27,6 +27,8 @@ class MainMenuState extends MusicBeatState
 {
 	public static var psychEngineVersion:String = '2.0'; //This is also used for Discord RPC
 	public static var curSelected:Int = 0;
+	public static var argyVersion:String = ''; //idk
+	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	private var camGame:FlxCamera;
@@ -190,6 +192,10 @@ class MainMenuState extends MusicBeatState
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "Funkin Android v" + Application.current.meta.get('version'), 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		add(versionShit);
+	        var versionShit:FlxText = new FlxText(12, FlxG.height - 64, 0, "By Mr. Argy and Ilidrag " + argyVersion, 12);
+		versionShit.scrollFactor.set();
+		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.PINK, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
 
 		// NG.core.calls.event.logEvent('swag').send();
