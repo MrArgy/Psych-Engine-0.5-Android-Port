@@ -113,6 +113,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.addByPrefix('selected', optionShit[0] + " white", 24);
 			menuItem.animation.play('idle');
 			menuItem.ID = 0;
+		        menuItem.angle = 7;
 			//menuItem.screenCenter(X);
 			menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
@@ -132,6 +133,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.addByPrefix('selected', optionShit[1] + " white", 24);
 			menuItem.animation.play('idle');
 			menuItem.ID = 1;
+		        menuItem.angle = 7;
 			//menuItem.screenCenter(X);
 			menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
@@ -151,6 +153,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.addByPrefix('selected', optionShit[2] + " white", 24);
 			menuItem.animation.play('idle');
 			menuItem.ID = 2;
+		        menuItem.angle = 7;
 			//menuItem.screenCenter(X);
 			menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
@@ -171,6 +174,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.addByPrefix('selected', optionShit[3] + " white", 24);
 			menuItem.animation.play('idle');
 			menuItem.ID = 3;
+		        menuItem.angle = 7;
 			//menuItem.screenCenter(X);
 			menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
@@ -214,7 +218,7 @@ class MainMenuState extends MusicBeatState
 		#end
 
 		#if mobileC
-		addVirtualPad(UP_DOWN, A_B_7);
+		addVirtualPad(UP_DOWN, A_7);
 		#end
 
 		super.create();
