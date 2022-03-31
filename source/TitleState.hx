@@ -586,20 +586,7 @@ class TitleState extends MusicBeatState
 			remove(ngSpr);
 
 			FlxG.camera.flash(FlxColor.PINK, 4);
-			remove(credGroup);
-			
-			FlxTween.tween(logoBl,{y: -100}, 1.4, {ease: FlxEase.expoInOut});
-			
-			logoBl.angle = 4;
-			
-			new FlxTimer().start(0.01, function(tmr:FlxTimer)
-					     {
-						     if(logoBl.angle == -4)
-							     FlxTween.angle(logoBl, logoBl.angle, 4, 4, {ease: FlxEase.quartInOut});
-						     if (logoBl.angle == 4)
-							     FlxTween.angle(logoBl, logoBl.angle, -4, -4, {ease: FlxEase.quardInOut});
-					   
-			
+			remove(credGroup);			
  			skInOutippedIntro = true;
 		}
 	}
