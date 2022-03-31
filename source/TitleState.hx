@@ -600,7 +600,7 @@ class TitleState extends MusicBeatState
 							     FlxTween.angle(logoBl, logoBl.angle, -4, -4, {ease: FlxEase.quardInOut});
 					   
 			
- 4			skInOutippedIntro = true;
+ 			skInOutippedIntro = true;
 		}
 	}
 }
