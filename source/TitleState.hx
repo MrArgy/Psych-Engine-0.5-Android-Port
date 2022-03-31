@@ -598,7 +598,7 @@ class TitleState extends MusicBeatState
 							     FlxTween.angle(logoBl, logoBl.angle, 4, 4, {ease: FlxEase.quartInOut});
 						     if (logoBl.angle == 4)
 							     FlxTween.angle(logoBl, logoBl.angle, -4, -4, {ease: FlxEase.quardInOut});
-					     }, 0);
+					     },
 			
  4			skInOutippedIntro = true;
 		}
