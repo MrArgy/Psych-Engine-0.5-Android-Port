@@ -587,7 +587,20 @@ class TitleState extends MusicBeatState
 
 			FlxG.camera.flash(FlxColor.PINK, 4);
 			remove(credGroup);
-			skippedIntro = true;
+			
+			FlxTween.tween(logoBl,{y: -100}, 1.4, {ease: FlxEase.expoInOut});
+			
+			logoBl.angle = 4;
+			
+			new FlxTimer().start(0.01, function(tmr:FlxTimer)
+					     {
+						     if(logoBl.angle == -4)
+							     FlxTween.angle(logoBl, logoBl.angle, 4, 4, {ease: FlxEase.quartInOut});
+						     if (logoBl.angle == 4)
+							     FlxTween.angle(logoBl, logoBl.angle, -4, -4, {ease: FlxEase.quardInOut});
+					     }, 0);
+			
+ 4			skInOutippedIntro = true;
 		}
 	}
 }
