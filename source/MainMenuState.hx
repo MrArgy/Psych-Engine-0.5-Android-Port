@@ -361,26 +361,9 @@ class MainMenuState extends MusicBeatState
 		});
 	}
 
-	var curLight:Int = 0;
-	public static var blammedLightsColors:Array<FlxColor> = [
-		0xff31a2fd, //blue
-		0xff31fd8c, //Green
-		0xfff794f7, //Pink
-		0xfff96d63, //Red
-		0xfffba633 //Orange
-	];
-
 	override function beatHit()
 	{
 		if (curBeat % 4 == 0) 
-		{
-			var randomNum:Int = FlxG.random.int(0, TitleState.blammedLightsColors.length-1, [curLight]);
-			var blamColor:FlxColor = TitleState.blammedLightsColors[randomNum];
-			for (spr in blammableObjects)
-			{
-				spr.color = blamColor;
-			}
-			curLight = randomNum;
 
 			FlxG.camera.zoom = 1.15;
 			FlxTween.tween(FlxG.camera, {zoom: 1}, 0.5, {ease: FlxEase.circOut});
