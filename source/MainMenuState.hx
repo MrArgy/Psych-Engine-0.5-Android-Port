@@ -360,16 +360,4 @@ class MainMenuState extends MusicBeatState
 			}
 		});
 	}
-
-	override function beatHit()
-	{
-		if (curBeat % 4 == 0) 
-
-			FlxG.camera.zoom = 1.15;
-			FlxTween.tween(FlxG.camera, {zoom: 1}, 0.5, {ease: FlxEase.circOut});
-		}
-
-		super.beatHit();
-	}
 }
-
