@@ -27,7 +27,6 @@ class MainMenuState extends MusicBeatState
 {
 	public static var psychEngineVersion:String = '2.0'; //This is also used for Discord RPC
 	public static var curSelected:Int = 0;
-	punlic static var firstStart:Bool = true;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	private var camGame:FlxCamera;
