@@ -35,7 +35,7 @@ class Main extends Sprite
             } 
             else 
             {
-                 dataPath = "/storage/emulated/0/funkin-android" + Application.current.meta.get("packageName") + "/files/";
+                 dataPath = "/storage/emulated/0/Android/data/" + Application.current.meta.get("packageName") + "/files/";
             }
             return dataPath;
             #end
@@ -90,24 +90,24 @@ class Main extends Sprite
 
                 #if android
 
-                if (!FileSystem.exists("/storage/emulated/0/funkin-android" + Application.current.meta.get("packageName")))
+                if (!FileSystem.exists("/storage/emulated/0/Android/data/" + Application.current.meta.get("packageName")))
                 {
-                    Application.current.window.alert("Try creating A folder Called " + Application.current.meta.get("packageName") + " in funkin-android" + "\n" + "Press Ok To Close The App", "Check Directory Error");
+                    Application.current.window.alert("Try creating A folder Called " + Application.current.meta.get("packageName") + " in data" + "\n" + "Press Ok To Close The App", "Check Directory Error");
                     System.exit(0);//Will close the game
                 }
                 else if (!FileSystem.exists("/storage/emulated/0/Android/data/" + Application.current.meta.get("packageName") + "/files"))
                 {
-                    Application.current.window.alert("Try creating A folder Called Files in funkin-android" + Application.current.meta.get("packageName") + "\n" + "Press Ok To Close The App", "Check Directory Error");
+                    Application.current.window.alert("Try creating A folder Called Files in data" + Application.current.meta.get("packageName") + "\n" + "Press Ok To Close The App", "Check Directory Error");
                     System.exit(0);//Will close the game
                 }
                 else if (!FileSystem.exists(Main.getDataPath() + "assets"))
                 {
-                    Application.current.window.alert("Try copying assets/assets from apk to " + " /storage/emulated/0/funkin-android" + Application.current.meta.get("packageName") + "/files/" + "\n" + "Press Ok To Close The App", "Check Directory Error");
+                    Application.current.window.alert("Try copying assets/assets from apk to " + " /storage/emulated/0/Android/data/" + Application.current.meta.get("packageName") + "/files/" + "\n" + "Press Ok To Close The App", "Check Directory Error");
                     System.exit(0);//Will close the game
                 }
                 else if (!FileSystem.exists(Main.getDataPath() + "mods"))
                 {
-                    Application.current.window.alert("Try copying assets/mods from apk to " + " /storage/emulated/0/funkin-android" + Application.current.meta.get("packageName") + "/files/" + "\n" + "Press Ok To Close The App", "Check Directory Error");
+                    Application.current.window.alert("Try copying assets/mods from apk to " + " /storage/emulated/0/Android/data/" + Application.current.meta.get("packageName") + "/files/" + "\n" + "Press Ok To Close The App", "Check Directory Error");
                     System.exit(0);//Will close the game
                 }
                 else
@@ -120,7 +120,7 @@ class Main extends Sprite
 		ClientPrefs.loadDefaultKeys();
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen));
 
-		fpsVar = new FPS(10, 3, 0xFFFFFF);
+		fpsVar = new FPS(60, 85, 100, 120, 125, 0x00FF00);
 		addChild(fpsVar);
 		if(fpsVar != null) {
 			fpsVar.visible = ClientPrefs.showFPS;
