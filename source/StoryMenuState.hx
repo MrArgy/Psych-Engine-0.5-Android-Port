@@ -269,8 +269,7 @@ class StoryMenuState extends MusicBeatState
 				openSubState(new GameplayChangersSubstate());
 			}
 			else if(controls.RESET#if mobileC || _virtualpad.buttonX.justPressed #end)
-			{
-
+			}
 			else if (controls.ACCEPT)
 			{
 				selectWeek();
